@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 5400000}
   - component: {fileID: 8200000}
+  - component: {fileID: 114647847107407546}
+  - component: {fileID: 114884050982540820}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Player
@@ -43,15 +45,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.81, y: 2.01, z: 25.927011}
+  m_LocalRotation: {x: 0, y: 0.9851244, z: -0, w: -0.17184298}
+  m_LocalPosition: {x: 19.979, y: 1.451, z: -0.107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
   - {fileID: 4094171741119518}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 199.79, z: 0}
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -322,8 +324,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.8
-  m_Radius: 0.5
+  m_Height: 1.34
+  m_Radius: 0.33
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -447,3 +449,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mCharacter: {fileID: 100002}
+--- !u!114 &114647847107407546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63332121a7a5a1244a57895b868be958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114884050982540820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd6ec943fc2b58459262fc6a23df1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standingHeight: 1
+  crouchHeight: 0.5

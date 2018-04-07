@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour {
-    public enum Items { Key1, Key2 };
+public class Item :MonoBehaviour{
+    public enum Items { Key1, Key2, Dick };
 
-    public Items items;
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public Items item;
+
+     [TextArea(3,10)]
+    public string desc = "Test";
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

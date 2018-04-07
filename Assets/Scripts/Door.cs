@@ -9,7 +9,9 @@ public class Door : MonoBehaviour
     private float DoorCloseAngle = 0.0f;
     public bool open;
     public bool enter;
-
+    public bool requires_item;
+    public Item.Items required_item;
+  
     //Main function
     private void Update()
     {
@@ -42,7 +44,15 @@ public class Door : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            enter = true;
+            PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
+            if (requires_item)
+            {
+                enter = playerInventory.mItems[required_item];
+            }
+            else
+            {
+                enter = true;
+            }
         }
     }
 
