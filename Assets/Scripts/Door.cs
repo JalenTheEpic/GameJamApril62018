@@ -11,30 +11,74 @@ public class Door : MonoBehaviour
     public bool enter;
     public bool requires_item;
     public Items required_item;
-  
+    private PlayerInventory playerInventory;
+    private bool done;
+
+    //0 door open
+    //1 door close
+    //2 locked door attempt
+    public AudioClip[] audioClips;
+
+    public AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        done = true;
+    }
+
     //Main function
     private void Update()
     {
-
-        if (open == true)
+        if (open)
         {
             var target = Quaternion.Euler(0, DoorOpenAngle, 0);
             // Dampen towards the target rotation
             transform.localRotation = Quaternion.Slerp(transform.localRotation, target, Time.deltaTime * smooth);
         }
 
-        if (open == false)
+        if (!open)
         {
             var target1 = Quaternion.Euler(0, DoorCloseAngle, 0);
             // Dampen towards the target rotation
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, target1, Time.deltaTime * smooth);
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, target1, Time.deltaTime * smooth * 2);
+            if (transform.localRotation.eulerAngles.y <= DoorCloseAngle + 7 && transform.localRotation.eulerAngles.y >= DoorCloseAngle - 7 && !done)
+            {
+                done = true;
+                audioSource.clip = audioClips[1];
+                audioSource.Play();
+            }
         }
 
         if (enter == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                open = !open;
+                if (!open && requires_item)
+                {
+                    if (playerInventory.mItems[required_item])
+                    {
+                        audioSource.clip = audioClips[0];
+                        audioSource.Play();
+                        open = true;
+                        done = false;
+                    }
+                    else
+                    {
+                        audioSource.clip = audioClips[2];
+                        audioSource.Play();
+                    }
+                }
+                else
+                {
+                    open = !open;
+                    done = false;
+                    if (open)
+                    {
+                        audioSource.clip = audioClips[0];
+                        audioSource.Play();
+                    }
+                }
             }
         }
     }
@@ -44,15 +88,8 @@ public class Door : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
-            if (requires_item)
-            {
-                enter = playerInventory.mItems[required_item];
-            }
-            else
-            {
-                enter = true;
-            }
+            playerInventory = other.GetComponent<PlayerInventory>();
+            enter = true;
         }
     }
 
