@@ -40,7 +40,7 @@ public class PlayerInventory : MonoBehaviour {
                 mItems[i.item] = true;
                 objectHit.SetActive(false);
             }
-            else if (hit.transform.tag == "PC" && hit.distance <= 2)
+            if (hit.transform.tag == "PC" && hit.distance <= 2)
             {
                 GitPush pcGit = hit.transform.gameObject.GetComponent<GitPush>();
                 if (pcGit.turnedOn)
@@ -48,10 +48,12 @@ public class PlayerInventory : MonoBehaviour {
                     pcGit.push();
                 }
             }
-            else if (hit.transform.tag == "Flashlight" && hit.distance <= 2)
+            if (hit.transform.tag == "Flashlight" && hit.distance <= 2)
             {
                 print("found it");
                 transform.Find("Flashlight").gameObject.SetActive(true);
+                GameObject objectHit = hit.transform.gameObject;
+                objectHit.SetActive(false);
             }
 
             // Do something with the object that was hit by the raycast.
