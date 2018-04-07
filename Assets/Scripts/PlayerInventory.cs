@@ -8,10 +8,11 @@ public class PlayerInventory : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         mCam = this.GetComponentInChildren<Camera>();
-        mItems = new Dictionary<Item.Items, bool>();
-
-        mItems.Add(Item.Items.Key1, false);
-	}
+        mItems = new Dictionary<Item.Items, bool>
+        {
+            { Item.Items.Key1, false }
+        };
+    }
 	
 	// Update is called once per frame
 	void Update () {
