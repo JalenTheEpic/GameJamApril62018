@@ -8,11 +8,17 @@ public class dialogueEvent : MonoBehaviour {
     [SerializeField]
     string myText = "Hello";
 
+    [SerializeField]
+    float myTime = 0;
+
+    public Dialogue UIObject;
+
 	// Use this for initialization
 	void Start () {
         myEvent = GetComponent<EventBase>();
 
         print(myText);
+        UIObject.Display(myText, myTime);
         myEvent.setComplete();
 	}
 	
