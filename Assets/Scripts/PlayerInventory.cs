@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour {
     public Dictionary<Items, bool> mItems;
     private Camera mCam;
+
+    [SerializeField]
+    GameObject keyObject;
+
 	// Use this for initialization
 	void Start () {
         mCam = this.GetComponentInChildren<Camera>();
@@ -50,10 +54,11 @@ public class PlayerInventory : MonoBehaviour {
             }
             if (hit.transform.tag == "Flashlight" && hit.distance <= 2)
             {
-                print("found it");
+                
                 transform.Find("Flashlight").gameObject.SetActive(true);
                 GameObject objectHit = hit.transform.gameObject;
                 objectHit.SetActive(false);
+                keyObject.SetActive(true);
             }
 
             // Do something with the object that was hit by the raycast.
