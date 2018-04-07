@@ -178,6 +178,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[0] = m_AudioSource.clip;
         }
 
+        public void setSpeed(float speed)
+        {
+            m_WalkSpeed = speed;
+        }
 
         private void UpdateCameraPosition(float speed)
         {

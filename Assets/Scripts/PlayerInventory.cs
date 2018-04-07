@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour {
-    public Dictionary<Item.Items, bool> mItems;
+    public Dictionary<Items, bool> mItems;
     private Camera mCam;
 	// Use this for initialization
 	void Start () {
         mCam = this.GetComponentInChildren<Camera>();
-        mItems = new Dictionary<Item.Items, bool>
+        mItems = new Dictionary<Items, bool>
         {
-            { Item.Items.Key1, false }
+            { Items.Key1, false }, { Items.Dick, false }
         };
     }
 	
@@ -33,13 +33,27 @@ public class PlayerInventory : MonoBehaviour {
         {
             if (hit.transform.tag == "Item" && hit.distance <= 1)
             {
+                
                 GameObject objectHit = hit.transform.gameObject;
                 Item i = objectHit.GetComponent<Item>();
                 Debug.Log(i.desc);
                 mItems[i.item] = true;
                 objectHit.SetActive(false);
             }
-            
+            else if (hit.transform.tag == "PC" && hit.distance <= 2)
+            {
+                GitPush pcGit = hit.transform.gameObject.GetComponent<GitPush>();
+                if (pcGit.turnedOn)
+                {
+                    pcGit.push();
+                }
+            }
+            else if (hit.transform.tag == "Flashlight" && hit.distance <= 2)
+            {
+                print("found it");
+                transform.Find("Flashlight").gameObject.SetActive(true);
+            }
+
             // Do something with the object that was hit by the raycast.
         }
     }

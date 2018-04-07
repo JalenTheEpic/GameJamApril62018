@@ -5,12 +5,12 @@ public class Door : MonoBehaviour
     // Smothly open a door
     private float smooth = 2.0f;
 
-    private float DoorOpenAngle = 90.0f;
+    public float DoorOpenAngle = 90.0f;
     private float DoorCloseAngle = 0.0f;
     public bool open;
     public bool enter;
     public bool requires_item;
-    public Item.Items required_item;
+    public Items required_item;
   
     //Main function
     private void Update()

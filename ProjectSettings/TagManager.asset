@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Item
   - Chair
+  - PC
+  - Flashlight
   layers:
   - Default
   - TransparentFX

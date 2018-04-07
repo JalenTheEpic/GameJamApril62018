@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum Items { Key1, Key2, Dick };
 public class Item :MonoBehaviour{
-    public enum Items { Key1, Key2, Dick };
+    
 
     public Items item;
 

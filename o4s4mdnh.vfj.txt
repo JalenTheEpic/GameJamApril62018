@@ -1,0 +1,133 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   Computer Screen Assets/git-shell.jpg
+#	new file:   Computer Screen Assets/git-shell.jpg.meta
+#	new file:   Computer Screen Assets/success.png
+#	new file:   Computer Screen Assets/success.png.meta
+#	new file:   Computer Screen Assets/windows_sucks.png
+#	new file:   Computer Screen Assets/windows_sucks.png.meta
+#	new file:   Models.meta
+#	new file:   Models/LowPolyFlashlight.fbx
+#	new file:   Models/LowPolyFlashlight.fbx.meta
+#	new file:   Models/Materials.meta
+#	new file:   Models/Materials/FlashlightMaterial.mat
+#	new file:   Models/Materials/FlashlightMaterial.mat.meta
+#	new file:   Models/Materials/Textures.meta
+#	new file:   Models/Materials/Textures/FlashlightTexture.png
+#	new file:   Models/Materials/Textures/FlashlightTexture.png.meta
+#	new file:   Models/Materials/WoodPileMaterial.mat
+#	new file:   Models/Materials/WoodPileMaterial.mat.meta
+#	modified:   Prefabs/Computer Monitor.prefab
+#	new file:   Prefabs/LowPolyFlashlight.prefab
+#	new file:   Prefabs/LowPolyFlashlight.prefab.meta
+#	modified:   Scripts/Door.cs
+#	new file:   Scripts/GitPush.cs
+#	new file:   Scripts/GitPush.cs.meta
+#	modified:   Scripts/Item.cs
+#	modified:   Scripts/PlayerInventory.cs
+#	new file:   Scripts/events.meta
+#	new file:   Scripts/events/EventBase.cs
+#	new file:   Scripts/events/EventBase.cs.meta
+#	new file:   Scripts/events/EventQueue.cs
+#	new file:   Scripts/events/EventQueue.cs.meta
+#	new file:   Scripts/events/boxCollideEvent.prefab
+#	new file:   Scripts/events/boxCollideEvent.prefab.meta
+#	new file:   Scripts/events/boxColliderEvent.cs
+#	new file:   Scripts/events/boxColliderEvent.cs.meta
+#	new file:   Scripts/events/dialogueEvent.cs
+#	new file:   Scripts/events/dialogueEvent.cs.meta
+#	new file:   Scripts/events/dialogueEvent.prefab
+#	new file:   Scripts/events/dialogueEvent.prefab.meta
+#	new file:   Scripts/events/flickerLightEvent.prefab
+#	new file:   Scripts/events/flickerLightEvent.prefab.meta
+#	new file:   Scripts/events/flickerLightsEvent.cs
+#	new file:   Scripts/events/flickerLightsEvent.cs.meta
+#	new file:   Scripts/events/gainWalkEvent.cs
+#	new file:   Scripts/events/gainWalkEvent.cs.meta
+#	new file:   Scripts/events/gitPushEvent.cs
+#	new file:   Scripts/events/gitPushEvent.cs.meta
+#	new file:   Scripts/events/gitPushEvent.prefab
+#	new file:   Scripts/events/gitPushEvent.prefab.meta
+#	new file:   Scripts/events/playAudioEvent.prefab
+#	new file:   Scripts/events/playAudioEvent.prefab.meta
+#	new file:   Scripts/events/setAmbienceEvent.cs
+#	new file:   Scripts/events/setAmbienceEvent.cs.meta
+#	new file:   Scripts/events/setAmbienceEvent.prefab
+#	new file:   Scripts/events/setAmbienceEvent.prefab.meta
+#	new file:   Scripts/events/setWalkSpeedEvent.cs
+#	new file:   Scripts/events/setWalkSpeedEvent.cs.meta
+#	new file:   Scripts/events/setWalkSpeedEvent.prefab
+#	new file:   Scripts/events/setWalkSpeedEvent.prefab.meta
+#	new file:   Scripts/events/soundQueue.prefab
+#	new file:   Scripts/events/soundQueue.prefab.meta
+#	new file:   Scripts/events/spawnItemEvent.cs
+#	new file:   Scripts/events/spawnItemEvent.cs.meta
+#	new file:   Scripts/events/spawnItemEvent.prefab
+#	new file:   Scripts/events/spawnItemEvent.prefab.meta
+#	new file:   Scripts/events/switchLightEvent.prefab
+#	new file:   Scripts/events/switchLightEvent.prefab.meta
+#	new file:   Scripts/events/switchLightsEvent.cs
+#	new file:   Scripts/events/switchLightsEvent.cs.meta
+#	new file:   Scripts/events/waitEvent.cs
+#	new file:   Scripts/events/waitEvent.cs.meta
+#	new file:   Scripts/events/waitEvent.prefab
+#	new file:   Scripts/events/waitEvent.prefab.meta
+#	new file:   Scripts/lightEffects.cs
+#	new file:   Scripts/lightEffects.cs.meta
+#	modified:   SimpleOffice_v2/Models/Materials/MAT_Simpleoffice_v2_light_01.mat
+#	modified:   SimpleOffice_v2/Scenes/SimpleOffice_v2_demo.unity
+#	modified:   Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs
+#	new file:   Tavern.meta
+#	new file:   Tavern/TotalHorrorV2.meta
+#	new file:   Tavern/TotalHorrorV2/Materials.meta
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalHorror V2.mat
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalHorror V2.mat.meta
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalHorrorTeeth.mat
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalHorrorTeeth.mat.meta
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalHorrorV2.mat
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalHorrorV2.mat.meta
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalHorrowWood.mat
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalHorrowWood.mat.meta
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalhorrorTongue.mat
+#	new file:   Tavern/TotalHorrorV2/Materials/TotalhorrorTongue.mat.meta
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps.meta
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorror V2_NRM.jpg
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorror V2_NRM.jpg.meta
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorror V2_SPEC.tga
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorror V2_SPEC.tga.meta
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorror V2_misc_SPEC.tga
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorror V2_misc_SPEC.tga.meta
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorrorV2_Stalker_AO.png
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorrorV2_Stalker_AO.png.meta
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorrorV2_Stalker_NRM_Main.png
+#	new file:   Tavern/TotalHorrorV2/ShaderMaps/TotalHorrorV2_Stalker_NRM_Main.png.meta
+#	new file:   Tavern/TotalHorrorV2/Textures.meta
+#	new file:   Tavern/TotalHorrorV2/Textures/TotalHorror V2.jpg
+#	new file:   Tavern/TotalHorrorV2/Textures/TotalHorror V2.jpg.meta
+#	new file:   Tavern/TotalHorrorV2/Thumbs.db
+#	new file:   Tavern/TotalHorrorV2/Thumbs.db.meta
+#	new file:   Tavern/TotalHorrorV2/TotalHorro2 The Stalker.prefab
+#	new file:   Tavern/TotalHorrorV2/TotalHorro2 The Stalker.prefab.meta
+#	new file:   Tavern/TotalHorrorV2/TotalHorror_The_Stalker_LOD0high.fbx
+#	new file:   Tavern/TotalHorrorV2/TotalHorror_The_Stalker_LOD0high.fbx.meta
+#	new file:   Tavern/TotalHorrorV2/TotalHorror_The_Stalker_LOD1.fbx
+#	new file:   Tavern/TotalHorrorV2/TotalHorror_The_Stalker_LOD1.fbx.meta
+#	new file:   Tavern/TotalHorrorV2/TotalHorror_The_Stalker_LOD2.fbx
+#	new file:   Tavern/TotalHorrorV2/TotalHorror_The_Stalker_LOD2.fbx.meta
+#	new file:   audio.meta
+#	new file:   audio/crash.wav
+#	new file:   audio/crash.wav.meta
+#	new file:   audio/light_bulb.wav
+#	new file:   audio/light_bulb.wav.meta
+#	new file:   audio/power_down.mp3
+#	new file:   audio/power_down.mp3.meta
+#	new file:   playSoundEvent.cs
+#	new file:   playSoundEvent.cs.meta
+#	modified:   ../ProjectSettings/TagManager.asset
+#
+
