@@ -14,7 +14,7 @@ public class PlayerInventory : MonoBehaviour {
         mCam = this.GetComponentInChildren<Camera>();
         mItems = new Dictionary<Items, bool>
         {
-            { Items.Key1, false }, { Items.Dick, false }
+            { Items.Key1, false }, { Items.Key2, false }, { Items.Dick, false }, {Items.InvisibleKey, false }
         };
     }
 	
@@ -27,6 +27,7 @@ public class PlayerInventory : MonoBehaviour {
         Ray ray = mCam.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(ray.origin, ray.direction);
     }
+
 
     void Pickup()
     {

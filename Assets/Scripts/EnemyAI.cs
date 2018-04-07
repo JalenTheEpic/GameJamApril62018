@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour {
     public enum EnemyState { INIT, SPAWN_DOWNSTAIRS, WALK };
     EnemyState enemyState = EnemyState.INIT;
 
-    Vector3 nextWalkPosition = new Vector3(-2f, 0, .5f); 
+    Vector3 nextWalkPosition = new Vector3(-2f, -3.5f, -9f); 
 
 	// Use this for initialization
 	void Start () {
@@ -44,6 +44,7 @@ public class EnemyAI : MonoBehaviour {
 		switch (enemyState){
             case EnemyState.WALK:
                 transform.Translate(Vector3.forward * 1 * Time.deltaTime);
+
                 if ((nextWalkPosition - transform.position).magnitude <= .3f)
                     transform.rotation = Quaternion.Euler(0, 131.41f, 0);
                 break;
