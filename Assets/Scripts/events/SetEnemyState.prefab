@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4478692036016152}
   - component: {fileID: 114477974902562032}
-  - component: {fileID: 114934942941148702}
+  - component: {fileID: 114905092427411784}
   m_Layer: 0
   m_Name: SetEnemyState
   m_TagString: Untagged
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012a648331822a742a0cc4cec512a8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114934942941148702
+--- !u!114 &114905092427411784
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -63,4 +63,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073ed878f9287884b916ec78fab96c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newState: 1
+  newState: 0
