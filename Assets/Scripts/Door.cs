@@ -54,7 +54,7 @@ public class Door : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (!open && requires_item)
+                if (requires_item)
                 {
                     if (playerInventory.mItems[required_item])
                     {

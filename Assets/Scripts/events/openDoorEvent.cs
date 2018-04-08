@@ -12,7 +12,10 @@ public class openDoorEvent : MonoBehaviour {
     bool toOpen = true;
 
     void Start () {
+        myEvent = GetComponent<EventBase>();
         door.GetComponent<Door>().open = toOpen;
+
+        myEvent.setComplete();
 	}
 	
 	// Update is called once per frame
