@@ -12,7 +12,7 @@ public class Door : MonoBehaviour
     public bool requires_item;
     public Items required_item;
     private PlayerInventory playerInventory;
-    private bool done;
+    public bool done;
 
     //0 door open
     //1 door close
@@ -45,6 +45,7 @@ public class Door : MonoBehaviour
             if (transform.localRotation.eulerAngles.y <= DoorCloseAngle + 7 && transform.localRotation.eulerAngles.y >= DoorCloseAngle - 7 && !done)
             {
                 done = true;
+                print("closed");
                 audioSource.clip = audioClips[1];
                 audioSource.Play();
             }
@@ -58,10 +59,14 @@ public class Door : MonoBehaviour
                 {
                     if (playerInventory.mItems[required_item])
                     {
-                        audioSource.clip = audioClips[0];
-                        audioSource.Play();
-                        open = true;
                         done = false;
+                        open = !open;
+                        if (open)
+                            audioSource.clip = audioClips[0];
+                        else
+                            audioSource.clip = audioClips[1];
+
+                        audioSource.Play();
                     }
                     else
                     {

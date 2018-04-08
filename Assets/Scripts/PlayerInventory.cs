@@ -18,7 +18,7 @@ public class PlayerInventory : MonoBehaviour {
         mCam = this.GetComponentInChildren<Camera>();
         mItems = new Dictionary<Items, bool>
         {
-            { Items.Key1, false }, { Items.Key2, false }, { Items.Dick, false }, {Items.InvisibleKey, false }, {Items.InvisibleKey2, false }, {Items.Battery, true }
+            { Items.Key1, false }, { Items.Key2, false }, { Items.Dick, false }, {Items.InvisibleKey, false }, {Items.InvisibleKey2, false }, {Items.Battery, true }, {Items.PowerOn, false }
         };
 
         flashLight = transform.Find("Flashlight").gameObject;
