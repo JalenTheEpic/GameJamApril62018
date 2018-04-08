@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SimpleOffice_v2/Scenes/SimpleOffice_v2_demo.unity
     guid: 6e963363bf2e87044bf0c3ad9d05d25d
+  - enabled: 1
+    path: Assets/loseGame.unity
+    guid: 290f2fc2540a2844094d6ade2a70df2b
