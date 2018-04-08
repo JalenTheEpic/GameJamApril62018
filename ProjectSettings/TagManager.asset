@@ -9,6 +9,7 @@ TagManager:
   - PC
   - Flashlight
   - Enemy
+  - Path
   layers:
   - Default
   - TransparentFX

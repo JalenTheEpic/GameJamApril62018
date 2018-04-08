@@ -9,13 +9,20 @@ public class EnemyAI : MonoBehaviour {
     public enum EnemyState { INIT, SPAWN_DOWNSTAIRS, WALK };
     EnemyState enemyState = EnemyState.INIT;
 
-    Vector3 nextWalkPosition = new Vector3(-2f, -3.5f, -9f); 
+    Vector3 nextWalkPosition;
+
+    [SerializeField]
+    Queue<Vector3> enemyPath = new Queue<Vector3>();
 
 	// Use this for initialization
 	void Start () {
-        mAnim = GetComponent<Animation>();
-
         
+        mAnim = GetComponent<Animation>();
+        Transform path = GameObject.FindGameObjectWithTag("Path").transform;
+        for (int i = 0; i <= path.childCount - 1; i++)
+        {
+            enemyPath.Enqueue(path.GetChild(i).transform.position);
+        }
 	}
 
 	
@@ -42,11 +49,23 @@ public class EnemyAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		switch (enemyState){
+            case EnemyState.INIT:
+                mAnim.Play("Idle");
+                break;
             case EnemyState.WALK:
-                transform.Translate(Vector3.forward * 1 * Time.deltaTime);
+                if (enemyPath.Count <= 1)
+                {
+                    enemyState = EnemyState.INIT;
+                    break;
+                }
 
-                if ((nextWalkPosition - transform.position).magnitude <= .3f)
-                    transform.rotation = Quaternion.Euler(0, 131.41f, 0);
+                transform.LookAt(enemyPath.Peek());
+                transform.Translate(Vector3.forward * 1 * Time.deltaTime);
+                if ((enemyPath.Peek() - transform.position).magnitude <= .1f)
+                {
+                    enemyPath.Dequeue();
+                    transform.LookAt(enemyPath.Peek());
+                }
                 break;
         }
 	}
