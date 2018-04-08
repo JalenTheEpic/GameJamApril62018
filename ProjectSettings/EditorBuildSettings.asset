@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/email.unity
+    guid: 41d81f1f85c127b4c89d71c4ad38f19f
+  - enabled: 1
+    path: Assets/SimpleOffice_v2/Scenes/SimpleOffice_v2_demo.unity
+    guid: 6e963363bf2e87044bf0c3ad9d05d25d
