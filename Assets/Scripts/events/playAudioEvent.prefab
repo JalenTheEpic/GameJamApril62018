@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4276091165959218}
-  - component: {fileID: 114593428352592760}
   - component: {fileID: 114074838782401190}
   - component: {fileID: 82677442809472568}
+  - component: {fileID: 114550977215359644}
   m_Layer: 0
   m_Name: playAudioEvent
   m_TagString: Untagged
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012a648331822a742a0cc4cec512a8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114593428352592760
+--- !u!114 &114550977215359644
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529963306818184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b2c4c8dc8fdd2d48acc3a14444fde39, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b4a2a47560c3f5428cb8913c325cc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mAudio: {fileID: 0}
