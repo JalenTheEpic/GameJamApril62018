@@ -61,7 +61,7 @@ public class EnemyAI : MonoBehaviour {
                 }
 
                 transform.LookAt(enemyPath.Peek());
-                transform.Translate(Vector3.forward * 1 * Time.deltaTime);
+                transform.Translate(Vector3.forward * 1.6f * Time.deltaTime);
                 if ((enemyPath.Peek() - transform.position).magnitude <= .1f)
                 {
                     enemyPath.Dequeue();

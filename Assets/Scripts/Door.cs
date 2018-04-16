@@ -24,6 +24,7 @@ public class Door : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.clip = null;
         done = true;
     }
 
@@ -42,12 +43,10 @@ public class Door : MonoBehaviour
             var target1 = Quaternion.Euler(0, DoorCloseAngle, 0);
             // Dampen towards the target rotation
             transform.localRotation = Quaternion.Slerp(transform.localRotation, target1, Time.deltaTime * smooth * 2);
-            if (transform.localRotation.eulerAngles.y <= DoorCloseAngle + 7 && transform.localRotation.eulerAngles.y >= DoorCloseAngle - 7 && !done)
+            if (transform.localRotation.eulerAngles.y <=  4 && transform.localRotation.eulerAngles.y >=  - 4 && !done)
             {
                 done = true;
-                print("closed");
-                audioSource.clip = audioClips[1];
-                audioSource.Play();
+                audioSource.PlayOneShot(audioClips[1]);
             }
         }
 
@@ -61,27 +60,25 @@ public class Door : MonoBehaviour
                     {
                         done = false;
                         open = !open;
-                        if (open)
-                            audioSource.clip = audioClips[0];
-                        else
-                            audioSource.clip = audioClips[1];
-
-                        audioSource.Play();
+                        if(open)
+                            audioSource.PlayOneShot(audioClips[0]);
                     }
                     else
                     {
-                        audioSource.clip = audioClips[2];
-                        audioSource.Play();
+                        audioSource.PlayOneShot(audioClips[2]);
                     }
                 }
                 else
                 {
                     open = !open;
-                    done = false;
+                    
                     if (open)
                     {
-                        audioSource.clip = audioClips[0];
-                        audioSource.Play();
+                        audioSource.PlayOneShot(audioClips[0]);
+                    }
+                    else
+                    {
+                        done = false;
                     }
                 }
             }
